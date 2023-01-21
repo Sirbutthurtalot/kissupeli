@@ -1,9 +1,15 @@
 // helpers
-const hide = (classname) => {
-    const elements = document.getElementsByClassName(classname);
-    for(var i = 0; i < elements.length; i++){
-        elements[i].remove()
-    }
+const hideElement = (id) => {
+    const element = document.getElementById(id);
+    element.style.visibility = "hidden";
+    console.log(element.style)
+}
+
+const showElement = (id) => {
+    const element = document.getElementById(id);
+    console.log(element.style.visibility)
+    element.style.visibility = "visible";
+    console.log(element.style.visibility)
 }
 
 const changePic = (id, picpath) => {
@@ -14,13 +20,15 @@ const changePic = (id, picpath) => {
 
 // main
 const handleYes = () => {
-    document.getElementById("kissukysymys").innerHTML="Voitit pelin!";
-    hide("choicebuttons");
+    document.getElementById("kissukysymys").innerHTML = "Voitit pelin!";
+    hideElement("choicebuttoncontainer");
+    showElement("restartbuttoncontainer");
     changePic("kissukuva", "./cat/win.png");
 }
 const handleNo = () => {
-    document.getElementById("kissukysymys").innerHTML="Hävisit pelin!";
-    hide("choicebuttons");
+    document.getElementById("kissukysymys").innerHTML = "Hävisit pelin!";
+    hideElement("choicebuttoncontainer");
+    showElement("restartbuttoncontainer");
     changePic("kissukuva", "./cat/lose.png");
 }
 const handleRestart = () => {

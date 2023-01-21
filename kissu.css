@@ -1,0 +1,24 @@
+body {
+    display:flex;
+    justify-content: center;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+
+#choicebuttoncontainer {
+    display:flex;
+    justify-content:space-evenly;
+}
+
+#restartbuttoncontainer {
+    display:flex;
+    justify-content:center;
+    padding: 32px;
+    visibility: hidden;
+}
+
+button {
+    font-family: 'Comic Sans MS';
+    background-color: #f3dfea;
+    padding: 2px 10px 2px 10px;
+}
